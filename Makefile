@@ -2,8 +2,8 @@
 #
 # ave - average, sum and other statistical filters
 #
-# @(#) $Revision: 1.4 $
-# @(#) $Id: Makefile,v 1.4 1999/09/20 18:33:46 chongo Exp chongo $
+# @(#) $Revision: 1.5 $
+# @(#) $Id: Makefile,v 1.5 1999/09/27 05:36:31 chongo Exp chongo $
 # @(#) $Source: /usr/local/src/cmd/ave/RCS/Makefile,v $
 #
 # Copyright (c) 1996 by Landon Curt Noll.  All Rights Reserved.
@@ -34,7 +34,7 @@ SHELL=/bin/sh
 BINMODE=0555
 DESTBIN=/usr/local/bin
 DESTLIB=/usr/local/lib
-INSTALL= /sbin/install
+INSTALL= install
 
 all: ave plus stddev
 
