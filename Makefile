@@ -6,7 +6,7 @@ SHELL=/bin/sh
 BINMODE=0555
 DESTBIN=/usr/local/bin
 DESTLIB=/usr/local/lib
-INSTALL=bsdinst
+INSTALL= /sbin/install
 
 all: ave plus stddev
 
@@ -26,7 +26,7 @@ stddev: stddev.pl
 	chmod +x $@
 
 install: all
-	${INSTALL} -c -m ${BINMODE} ave plus stddev  ${DESTBIN}
+	${INSTALL} -c -m ${BINMODE} ave plus stddev ${DESTBIN}
 
 clean:
 
