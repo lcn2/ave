@@ -2,9 +2,9 @@
 #
 # ave - average, sum and other statistical filters
 #
-# @(#) $Revision$
-# @(#) $Id$
-# @(#) $Source$
+# @(#) $Revision: 1.4 $
+# @(#) $Id: Makefile,v 1.4 1999/09/20 18:33:46 chongo Exp chongo $
+# @(#) $Source: /usr/local/src/cmd/ave/RCS/Makefile,v $
 #
 # Copyright (c) 1996 by Landon Curt Noll.  All Rights Reserved.
 #
@@ -25,7 +25,10 @@
 # USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
 # OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 # PERFORMANCE OF THIS SOFTWARE.
-
+#
+# chongo <was here> /\oo/\
+#
+# Share and enjoy!
 
 SHELL=/bin/sh
 BINMODE=0555
