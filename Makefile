@@ -26,9 +26,7 @@ stddev: stddev.pl
 	chmod +x $@
 
 install: all
-	${INSTALL} -c -m ${BINMODE} ave ${DESTBIN}/ave
-	${INSTALL} -c -m ${BINMODE} ave ${DESTBIN}/plus
-	${INSTALL} -c -m ${BINMODE} ave ${DESTBIN}/stddev
+	${INSTALL} -c -m ${BINMODE} ave plus stddev  ${DESTBIN}
 
 clean:
 
