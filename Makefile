@@ -2,12 +2,12 @@
 #
 # ave - average, sum and other statistical filters
 #
-# @(#) $Revision: 1.6 $
-# @(#) $Id: Makefile,v 1.6 2000/04/23 07:55:35 chongo Exp root $
+# @(#) $Revision: 1.7 $
+# @(#) $Id: Makefile,v 1.7 2014/03/16 02:35:12 root Exp root $
 # @(#) $Source: /usr/local/src/bin/ave/RCS/Makefile,v $
 #
 # Copyright (c) 1996,1999,2014 by Landon Curt Noll.  All Rights Reserved.
-e
+#
 # Permission to use, copy, modify, and distribute this software and
 # its documentation for any purpose and without fee is hereby granted,
 # provided that the above copyright, this permission notice and text
