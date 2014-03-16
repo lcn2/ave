@@ -2,11 +2,11 @@
 #
 # stddev - compute the standard deviation of input
 #
-# @(#) $Revision: 1.2 $
-# @(#) $Id: stddev.pl,v 1.2 1999/09/20 18:33:46 chongo Exp chongo $
+# @(#) $Revision: 1.3 $
+# @(#) $Id: stddev.pl,v 1.3 1999/09/27 05:36:31 chongo Exp chongo $
 # @(#) $Source: /usr/local/src/cmd/ave/RCS/stddev.pl,v $
 #
-# Copyright (c) 1996 by Landon Curt Noll.  All Rights Reserved.
+# Copyright (c) 1996,2004 by Landon Curt Noll.  All Rights Reserved.
 #
 # Permission to use, copy, modify, and distribute this software and
 # its documentation for any purpose and without fee is hereby granted,
@@ -36,6 +36,7 @@
 # usage and variables
 #
 use strict;
+use bytes;
 my $sum;	# sum of input
 my $line;	# current value read
 my $count;	# number of values read
