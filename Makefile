@@ -1,12 +1,8 @@
-#!/usr/bin/make
+#!/usr/bin/env make
 #
 # ave - average, sum and other statistical filters
 #
-# @(#) $Revision: 1.8 $
-# @(#) $Id: Makefile,v 1.8 2014/03/16 02:36:05 root Exp $
-# @(#) $Source: /usr/local/src/bin/ave/RCS/Makefile,v $
-#
-# Copyright (c) 1996,1999,2014 by Landon Curt Noll.  All Rights Reserved.
+# Copyright (c) 1996,1999,2014,2023 by Landon Curt Noll.  All Rights Reserved.
 #
 # Permission to use, copy, modify, and distribute this software and
 # its documentation for any purpose and without fee is hereby granted,
@@ -36,12 +32,6 @@ DESTBIN=/usr/local/bin
 INSTALL= install
 
 TARGETS= ave plus stddev
-
-# remote operations
-#
-THISDIR= ave
-RSRCPSH= rsrcpush
-RMAKE= rmake
 
 all: ${TARGETS}
 
@@ -74,41 +64,3 @@ help:
 	@echo make all
 	@echo make install
 	@echo make clobber
-	@echo
-	@echo make pushsrc
-	@echo make pushsrcn
-	@echo
-	@echo make rmtall
-	@echo make rmtinstall
-	@echo make rmtclobber
-	@echo
-	@echo make univ
-
-# push source to remote sites
-#
-pushsrc:
-	${RSRCPSH} -v -x . ${THISDIR}
-
-pushsrcq:
-	@${RSRCPSH} -q . ${THISDIR}
-
-pushsrcn:
-	${RSRCPSH} -v -x -n . ${THISDIR}
-
-# run make on remote hosts
-#
-rmtall:
-	${RMAKE} -v ${THISDIR} all
-
-rmtinstall:
-	${RMAKE} -v ${THISDIR} install
-
-rmtclean:
-	${RMAKE} -v ${THISDIR} clean
-
-rmtclobber:
-	${RMAKE} -v ${THISDIR} clobber
-
-# build, install, and cleanup everywhere
-#
-univ: all install clobber pushsrc rmtall rmtinstall rmtclobber
