@@ -2,9 +2,9 @@
 #
 # ave - compute the average of input
 #
-# @(#) $Revision: 1.3 $
-# @(#) $Id: ave.pl,v 1.3 1999/09/27 05:36:31 chongo Exp chongo $
-# @(#) $Source: /usr/local/src/cmd/ave/RCS/ave.pl,v $
+# @(#) $Revision: 1.4 $
+# @(#) $Id: ave.pl,v 1.4 2014/03/16 02:34:56 root Exp $
+# @(#) $Source: /usr/local/src/bin/ave/RCS/ave.pl,v $
 #
 # Copyright (c) 1996,2004 by Landon Curt Noll.  All Rights Reserved.
 #

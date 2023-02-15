@@ -2,9 +2,9 @@
 #
 # stddev - compute the standard deviation of input
 #
-# @(#) $Revision: 1.3 $
-# @(#) $Id: stddev.pl,v 1.3 1999/09/27 05:36:31 chongo Exp chongo $
-# @(#) $Source: /usr/local/src/cmd/ave/RCS/stddev.pl,v $
+# @(#) $Revision: 1.4 $
+# @(#) $Id: stddev.pl,v 1.4 2014/03/16 02:34:56 root Exp $
+# @(#) $Source: /usr/local/src/bin/ave/RCS/stddev.pl,v $
 #
 # Copyright (c) 1996,2004 by Landon Curt Noll.  All Rights Reserved.
 #

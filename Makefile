@@ -2,8 +2,8 @@
 #
 # ave - average, sum and other statistical filters
 #
-# @(#) $Revision: 1.7 $
-# @(#) $Id: Makefile,v 1.7 2014/03/16 02:35:12 root Exp root $
+# @(#) $Revision: 1.8 $
+# @(#) $Id: Makefile,v 1.8 2014/03/16 02:36:05 root Exp $
 # @(#) $Source: /usr/local/src/bin/ave/RCS/Makefile,v $
 #
 # Copyright (c) 1996,1999,2014 by Landon Curt Noll.  All Rights Reserved.
