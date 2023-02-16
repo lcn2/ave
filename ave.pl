@@ -1,12 +1,8 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl -w
 #
 # ave - compute the average of input
 #
-# @(#) $Revision: 1.4 $
-# @(#) $Id: ave.pl,v 1.4 2014/03/16 02:34:56 root Exp $
-# @(#) $Source: /usr/local/src/bin/ave/RCS/ave.pl,v $
-#
-# Copyright (c) 1996,2004 by Landon Curt Noll.  All Rights Reserved.
+# Copyright (c) 1996,2004,2023 by Landon Curt Noll.  All Rights Reserved.
 #
 # Permission to use, copy, modify, and distribute this software and
 # its documentation for any purpose and without fee is hereby granted,
