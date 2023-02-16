@@ -26,29 +26,32 @@
 #
 # Share and enjoy!
 
-SHELL=/bin/sh
-BINMODE=0555
-DESTBIN=/usr/local/bin
+SHELL= bash
+BINMODE= 0555
+DESTBIN= /usr/local/bin
 INSTALL= install
+RM= rm
+CP= cp
+CHMOD= chmod
 
 TARGETS= ave plus stddev
 
 all: ${TARGETS}
 
 ave: ave.pl
-	-rm -f $@
-	cp $@.pl $@
-	chmod +x $@
+	${RM} -f $@
+	${CP} $@.pl $@
+	${CHMOD} +x $@
 
 plus: plus.pl
-	-rm -f $@
-	cp $@.pl $@
-	chmod +x $@
+	${RM} -f $@
+	${CP} $@.pl $@
+	${CHMOD} +x $@
 
 stddev: stddev.pl
-	-rm -f $@
-	cp $@.pl $@
-	chmod +x $@
+	${RM} -f $@
+	${CP} $@.pl $@
+	${CHMOD} +x $@
 
 install: all
 	${INSTALL} -c -m ${BINMODE} ${TARGETS} ${DESTBIN}
@@ -56,7 +59,7 @@ install: all
 clean:
 
 clobber: clean
-	-rm -f ${TARGETS} 
+	${RM} -f ${TARGETS}
 
 # help
 #
