@@ -1,0 +1,135 @@
+#!/usr/bin/env perl
+#
+# ave - compute the average of numbers
+#
+# Copyright (c) 1996,1999-2000,2004,2014,2023,2025 by Landon Curt Noll.  All Rights Reserved.
+#
+# Permission to use, copy, modify, and distribute this software and
+# its documentation for any purpose and without fee is hereby granted,
+# provided that the above copyright, this permission notice and text
+# this comment, and the disclaimer below appear in all of the following:
+#
+#       supporting documentation
+#       source copies
+#       source works derived from this source
+#       binaries derived from this source or from derived source
+#
+# LANDON CURT NOLL DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE,
+# INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO
+# EVENT SHALL LANDON CURT NOLL BE LIABLE FOR ANY SPECIAL, INDIRECT OR
+# CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF
+# USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+# OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+# PERFORMANCE OF THIS SOFTWARE.
+#
+# http://www.isthe.com/chongo/index.html
+# https://github.com/lcn2
+#
+# Share and enjoy!  :-)
+
+
+# requirements
+#
+use strict;
+use bytes;
+use vars qw($opt_h $opt_V $opt_a);
+use Getopt::Long qw(:config no_ignore_case);
+use File::Basename;
+
+# version
+#
+my $VERSION = "1.1.0 2025-04-11";
+
+# my vars
+#
+my $NAME = basename($0);
+my $sum;	# sum of input
+my $line;	# current value read
+my $count;	# number of values read
+
+# usage and help
+#
+my $usage = "$NAME [-h] [-V] [-a] [file ...]";
+my $help = qq{$usage
+
+    -h          print help and exit
+    -V          print version and exit
+
+    -a		process numbers in all fields (def: process 1st field only)
+
+    [file ...]	read from file(s) (def: read from stdin)
+
+$NAME version: $VERSION};
+my %optctl = (
+    "h" => \$opt_h,
+    "V" => \$opt_V,
+    "a" => \$opt_a
+);
+
+
+# setup
+#
+select(STDOUT);
+$| = 1;
+
+# set the defaults
+#
+$sum = 0;
+$count = 0;
+#
+$opt_h = 0;
+$opt_V = 0;
+$opt_a = 0;
+
+
+# parse args
+#
+if (!GetOptions(%optctl)) {
+    print STDERR "invalid command line\nusage: $help\n";
+    exit(3);
+}
+if ($opt_h) {
+    print "$help\n";
+    exit(0);
+}
+if ($opt_V) {
+    print "$VERSION\n";
+    exit(0);
+}
+
+
+# read variables
+#
+while (defined($line = <>)) {
+
+    # case: process all fields
+    #
+    if ($opt_a) {
+
+	# process each field
+	#
+	my @F = split(/\s+/, $line);
+	foreach (@F) {
+	    $sum += $_;
+	    ++$count;
+	}
+
+    # case: process 1st field only
+    #
+    } else {
+	$sum += $line;
+	++$count;
+    }
+}
+
+# firewall - no values as 0 average
+#
+if ($count <= 0) {
+    print "0\n";
+    exit 0;
+}
+
+# produce the average
+#
+print $sum/$count, "\n";
+exit 0;
