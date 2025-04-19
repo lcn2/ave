@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 #
-# plus - compute the sum of numbers
+# plus - compute the sum of numbers from stdin
 #
 # Copyright (c) 1996,1999-2000,2004,2014,2023,2025 by Landon Curt Noll.  All Rights Reserved.
 #
@@ -22,12 +22,13 @@
 # OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 # PERFORMANCE OF THIS SOFTWARE.
 #
-# usage:
-#	cat data | plus
+# chongo (Landon Curt Noll) /\oo/\
 #
-# chongo <was here> /\oo/\
+# http://www.isthe.com/chongo/index.html
+# https://github.com/lcn2
 #
-# Share and enjoy!
+# Share and enjoy!  :-)
+
 
 # usage and variables
 #
